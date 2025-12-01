@@ -1,15 +1,32 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-//import HomePage from '../views/HomePage.vue';
-import UsuariosList from '../views/UsuariosList.vue';
-import UsuarioForm from '../views/UsuarioForm.vue';
+import LoginPage from '../views/LoginPage.vue';
+import RegisterUser from '../views/RegisterUser.vue';
+import AddExpense from '../views/AddExpense.vue';
+import Summary from '../views/SummaryView.vue';
 
 const routes: Array<RouteRecordRaw> = [
-  { path: '/', redirect: '/usuarios' },
-  { path: '/usuarios', component: UsuariosList },
-  { path: '/usuarios/nuevo', component: UsuarioForm },
-  { path: '/usuarios/editar/:id', component: UsuarioForm }
-]
+  {
+    path: '/',
+    name: 'login',
+    component: LoginPage
+  },
+  {
+    path: '/registro',
+    name: 'registro',
+    component: RegisterUser
+  },
+  {
+    path: '/agregar-gasto',
+    name: 'agregar-gasto',
+    component: AddExpense
+  },
+  {
+    path: '/resumen',
+    name: 'resumen',
+    component: Summary
+  }
+];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
