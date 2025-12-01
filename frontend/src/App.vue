@@ -8,4 +8,5 @@
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 </script>
 
-<!-- Hola -->
+<!-- prueba Hola -->
+ 
